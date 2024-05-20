@@ -41,7 +41,7 @@ jobs:
           echo "Password: ${{env.password}}"
 
       - name: "Show values when the username is correct"
-        if: ${{ env.username != '' && env.username == ''}}
+        if: ${{ env.username != '' && env.username != ''}}
         run: |
           echo "The password and user exists"
 

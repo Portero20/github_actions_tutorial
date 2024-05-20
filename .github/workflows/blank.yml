@@ -34,3 +34,7 @@ jobs:
           echo "Platform: ${{env.platform}}"
           echo "Region: ${{env.region}}"
           echo "Account: ${{env.account}}"
+
+      - name: "Show default environment variables"
+        run: |
+          echo "Event ${{toJSON(github.event)}}"

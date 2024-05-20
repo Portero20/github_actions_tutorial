@@ -20,6 +20,9 @@ jobs:
       region: us-east-1
       account: 12345678
 
+      username: ${{secrets.USERNAME}}
+      password: ${{secrets.PASSWORD}}
+
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -29,11 +32,13 @@ jobs:
         run: echo "Hola Mundo"
 
       - name: "Show environment variables"
-        if: ${{env.platform == 'azure'}}
         run: |
           echo "Platform: ${{env.platform}}"
           echo "Region: ${{env.region}}"
           echo "Account: ${{env.account}}"
+
+          echo "Username: ${{env.username}}"
+          echo "Password: ${{env.password}}"
 
       - name: "Show default environment variables"
         run: |

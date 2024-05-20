@@ -38,3 +38,5 @@ jobs:
       - name: "Show default environment variables"
         run: |
           echo "Event ${{toJSON(github.event)}}"
+          echo "GITHUB_ACTOR: $GITHUB_ACTOR"
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"

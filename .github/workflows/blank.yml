@@ -40,6 +40,8 @@ jobs:
           echo "Username: ${{env.username}}"
           echo "Password: ${{env.password}}"
 
+          echo "Project version ${{vars.PROJECT_VERSION}}"
+
       - name: "Show values when the username is correct"
         if: ${{ env.username != '' && env.username != ''}}
         run: |
